@@ -15,8 +15,17 @@ app.use("/api/events", eventRoutes);
 app.use("/api/registrations", registrationRoutes);
 
 app.get("/", (req, res) => {
-    res.send("Event Registration API is running...");
+  res.send({
+    message: "🎉 Welcome to the Event Registration API!",
+    info: "Use the /api routes to interact with the system.",
+    routes: {
+      auth: "/api/auth",
+      events: "/api/events",
+      registration: "/api/registration"
+    }
+  });
 });
+
 
 const PORT = process.env.PORT || 4000;
 
