@@ -6,22 +6,15 @@ module.exports = new EntitySchema({
     columns: {
         _id: {
             primary: true,
-            type: "objectid",
-            generated: true
+            type: "objectId",
+            objectId: true,
+            generated: false
         },
-        name: {
-            type: "string"
-        },
-        email: {
-            type: "string",
-            unique: true
-        },
-        password: {
-            type: "string"
-        },
-        isAdmin: {
-            type: "boolean",
-            default: false
-        }
+        name: { type: "string" },
+        email: { type: "string", unique: true },
+        password: { type: "string" },
+        isAdmin: { type: "boolean", default: false },
+        createdAt: { type: "date", default: () => new Date() }
     }
 });
+

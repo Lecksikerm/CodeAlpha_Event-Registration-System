@@ -8,7 +8,7 @@ const Registration = require("./entities/Registration");
 
 const AppDataSource = new DataSource({
   type: "mongodb",
-  url: process.env.MONGO_URI,
+  url: process.env.MONGODB_URI,
   useNewUrlParser: true,
   useUnifiedTopology: true,
   synchronize: true,
