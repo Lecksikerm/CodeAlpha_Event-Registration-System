@@ -222,6 +222,12 @@ Authorization: Bearer <user_token>
 
 ---
 
+## Deployment URL
+
+* https://event-registration-system-09d6.onrender.com/
+
+---
+
 # 🧪 Testing
 
 * Register user
