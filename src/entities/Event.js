@@ -14,6 +14,6 @@ module.exports = new EntitySchema({
         date: { type: "date" },
         location: { type: "string", nullable: true },
         maxAttendees: { type: "int", nullable: true },
-        createdAt: { type: "date", createDate: true }
+        createdAt: { type: "date", default: () => new Date() }
     }
 });
